@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
-import WindowTitlebar from '../components/WindowTitlebar/WindowTitlebar';
 import NoteCard from '../components/NoteCards/NoteCard/NoteCard';
 // import SearchButton from '../components/SearchButton/SearchButton';
 import { StoreContext } from '../context'
@@ -14,7 +13,6 @@ export default function Workspace({ match }) {
     const collections = getCollections(folder.collections)
     return (
         <React.Fragment>
-            <WindowTitlebar docTitle="Home" />
             <header className="home-header">
                 <h1 className="title">Home</h1>
                 <div className="controls">

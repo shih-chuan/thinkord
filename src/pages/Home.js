@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-// import WindowTitlebar from '../components/WindowTitlebar/WindowTitlebar';
 import NoteCards from '../components/NoteCards/NoteCards';
-import Folders from '../components/Folders/Folders'
+import Folders from '../components/Folders/Folders';
 import SearchButton from '../components/SearchButton/SearchButton';
 import './Home.scss';
 import Container from 'react-bootstrap/Container';
@@ -23,8 +22,7 @@ function App() {
   }
 
   return (
-    <React.Fragment>
-      {/* <WindowTitlebar docTitle="Home" /> */}
+    <>
       <header className="home-header">
         <h1 className="title">Home</h1>
         <div className="controls">
@@ -33,15 +31,13 @@ function App() {
           <img className="user" alt="user" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3f_mCLpkLWSbUPVBMkI1-ZUUFP-dqFeFGUCDOc1lzuWUQxROe&usqp=CAU" />
         </div>
       </header>
-      <main>
-        <Container>
+      <div className="Content">
+        <Container className="container">
+          <Folders data={data}/>
           <NoteCards data={data} />
         </Container>
-        <Container>
-          <Folders data={data}/>
-        </Container>
-      </main>
-    </React.Fragment>
+      </div>
+    </>
   );
 }
 
